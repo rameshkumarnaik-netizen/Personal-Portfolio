@@ -380,3 +380,20 @@ nav.fas{
     margin-top: -40px;
     display: block;
 }
+/* Default styles for the side menu */
+nav ul {
+    background: #ff004f;
+    position: fixed;
+    top: 0;
+    right: -200px; /* Hide the menu by default */
+    width: 200px;
+    height: 100vh;
+    padding-top: 50px;
+    z-index: 2;
+    transition: right 0.5s;
+}
+
+/* Show the side menu when the "openmenu" function is triggered */
+nav ul.active {
+    right: 0; /* Show the menu */
+}

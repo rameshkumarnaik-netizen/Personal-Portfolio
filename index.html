@@ -12,17 +12,17 @@
         <div id="header">
             <div class="container">
                 <nav>
-                    <img src="images/logo.png"class="logo">
-                    <ul id="sidemenu">
-                        <li><a href="#header">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#portfolio">Portfolio</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                        <i class="fa-regular fa-circle-xmark" onclick="closemenu()"></i>
-                    </ul>
-                    <i class="fa-solid fa-bars" onclick="openmenu()"></i>
-                </nav>
+    <img src="images/logo.png" class="logo">
+    <ul id="sidemenu">
+        <li><a href="#header">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <i class="fa-regular fa-circle-xmark" onclick="closemenu()"></i>
+    </ul>
+    <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+</nav>
                 <div class="header-text">
                     <p>Full-Stack Web Developer</p>
                     <h1>Hii!, I'm <span>Mude Rameshkumarnaik</span><br> From Madanapalle</h1>
@@ -201,13 +201,15 @@
 
         </script>
         <script>
-            var sidemeu = document.getElementById("sidemenu");
-            function openmenu(){
-                sidemeu.style.right ="0";
-            }
-            function closemenu(){
-                sidemeu.style.right ="-200px";
-            }
+            var sidemenu = document.getElementById("sidemenu");
+
+function openmenu() {
+    sidemenu.classList.add("active"); // Add the "active" class to show the menu
+}
+
+function closemenu() {
+    sidemenu.classList.remove("active"); // Remove the "active" class to hide the menu
+}
         </script>
         <script>
             const scriptURL = 'https://script.google.com/macros/s/AKfycbxHlFsX4RRUlKNEdRxjSaSjAJLybPnV0BTnzW98WOKX1PQUsNAkwFgqcOD339iZA5CuYQ/exec'
