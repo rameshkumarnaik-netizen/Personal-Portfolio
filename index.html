@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+   <!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8">
@@ -12,17 +12,17 @@
         <div id="header">
             <div class="container">
                 <nav>
-    <img src="images/logo.png" class="logo">
-    <ul id="sidemenu">
-        <li><a href="#header">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <i class="fa-regular fa-circle-xmark" onclick="closemenu()"></i>
-    </ul>
-    <i class="fa-solid fa-bars" onclick="openmenu()"></i>
-</nav>
+                    <img src="images/logo.png" class="logo">
+                        <ul id="sidemenu">
+                            <li><a href="#header">Home</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#services">Services</a></li>
+                            <li><a href="#portfolio">Portfolio</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                            <i class="fas fa-times" onclick="closemenu()"></i>
+                        </ul>
+                    <i class="fas fa-bars" onclick="openmenu()"></i>
+                </nav>
                 <div class="header-text">
                     <p>Full-Stack Web Developer</p>
                     <h1>Hii!, I'm <span>Mude Rameshkumarnaik</span><br> From Madanapalle</h1>
@@ -175,9 +175,9 @@
                             <input type="text" name="Name" placeholder="Your Name" required>  
                             <input type="email" name="Email" placeholder="Your Email" required>   
                             <textarea name="Message" rows="6" placeholder="your Message"></textarea>
-                            <button type="submit" class="btn btn2">Submit</button>              
-                        </form>                        <span id="msg"></span>
-
+                            <button type="submit" class="btn btn2">Submit</button>             
+                        </form>                        
+                        <span id="msg"></span>
                     </div>
                 </div>
             </div>
@@ -188,6 +188,7 @@
         <script>
             var tablinks = document.getElementsByClassName("tab-links");
             var tabcontents = document.getElementsByClassName("tab-contents");
+
             function opentab(tabname){
                 for(tablink of tablinks){
                     tablink.classList.remove("active-link");
@@ -203,31 +204,31 @@
         <script>
             var sidemenu = document.getElementById("sidemenu");
 
-function openmenu() {
-    sidemenu.classList.add("active"); // Add the "active" class to show the menu
-}
-
-function closemenu() {
-    sidemenu.classList.remove("active"); // Remove the "active" class to hide the menu
-}
+            function openmenu() {
+                sidemenu.Style.right = "0"; 
+            }
+            function closemenu() {
+                sidemenu.Style.right = "-200px"; 
+            }
         </script>
         <script>
-            const scriptURL = 'https://script.google.com/macros/s/AKfycbxHlFsX4RRUlKNEdRxjSaSjAJLybPnV0BTnzW98WOKX1PQUsNAkwFgqcOD339iZA5CuYQ/exec'
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbxRqQv41uOlGKaHCIK4TOxSWfcD7l0ZlJpZJUOWH7RuVOgHBu7ujgfHFHwVPdENKMYYGQ/exec'
             const form = document.forms['submit-to-google-sheet']
-            const msg = document.getElementById("msg")
-          
+            const msg = document.getElementById('msg')
             form.addEventListener('submit', e => {
               e.preventDefault()
               fetch(scriptURL, { method: 'POST', body: new FormData(form)})
                 .then(response => {
-                    msg.innerHTML ="message sent successfully"
-                    setTimeout(function(){
-                        msg.innerHTML = ""
-                    },5000)
+                    msg.innerHTML = "Message Sent Successfully"
+                    setTimeout(
+                        function(){
+                            msg.innerHTML = ""
+                        }, 5000
+                    )
                     form.reset()
                 })
                 .catch(error => console.error('Error!', error.message))
-            })
+            })
           </script>
 
     </body>
