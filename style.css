@@ -313,18 +313,10 @@ nav .fas{
     display: none;
 
 }
-.container {
-    width: 80%;
-    margin: 0 auto;
-}
+
 
 @media only screen and (max-width:  768px){
-    .item {
-        flex-basis: 100%; /* Make items stack on top of each other on smaller screens */
-      }
-      .container {
-        width: 95%;
-    }
+    
     #header{
         background-image: url(images/background-2.jpg);
     }
