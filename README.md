@@ -1,0 +1,1 @@
+A portfolio website is a digital platform showcasing your work, skills, and experience, acting as a visual resume or gallery for potential clients, employers, or collaborators. It's a tool for demonstrating your capabilities and expertise to a global audience. 
